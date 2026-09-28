@@ -1,0 +1,173 @@
+export interface SkillGapData {
+  id: string;
+  skill: string;
+  demand: number;
+  supply: number;
+  gap: number;
+  gapPercent: number;
+  priority: 'critical' | 'high' | 'moderate' | 'low';
+  medianWage: number;
+  trend: 'increasing' | 'stable' | 'decreasing';
+  sector: string;
+  districts: string[];
+  employerDemand: 'very-high' | 'high' | 'moderate' | 'low';
+}
+
+export const skillGapsData: SkillGapData[] = [
+  {
+    id: 'SG001',
+    skill: 'EV Diagnostics',
+    demand: 18400,
+    supply: 6600,
+    gap: 11800,
+    gapPercent: 64,
+    priority: 'critical',
+    medianWage: 24000,
+    trend: 'increasing',
+    sector: 'Automotive',
+    districts: ['Pune', 'Nashik', 'Nagpur'],
+    employerDemand: 'very-high',
+  },
+  {
+    id: 'SG002',
+    skill: 'CNC Programming',
+    demand: 14200,
+    supply: 8100,
+    gap: 6100,
+    gapPercent: 43,
+    priority: 'high',
+    medianWage: 22000,
+    trend: 'increasing',
+    sector: 'Manufacturing',
+    districts: ['Pune', 'Mumbai', 'Chhatrapati Sambhajinagar'],
+    employerDemand: 'high',
+  },
+  {
+    id: 'SG003',
+    skill: 'Industrial Automation',
+    demand: 12800,
+    supply: 7200,
+    gap: 5600,
+    gapPercent: 44,
+    priority: 'high',
+    medianWage: 23500,
+    trend: 'increasing',
+    sector: 'Manufacturing',
+    districts: ['Nashik', 'Pune', 'Nagpur'],
+    employerDemand: 'high',
+  },
+  {
+    id: 'SG004',
+    skill: 'PLC',
+    demand: 11400,
+    supply: 7800,
+    gap: 3600,
+    gapPercent: 32,
+    priority: 'moderate',
+    medianWage: 21000,
+    trend: 'stable',
+    sector: 'Manufacturing',
+    districts: ['Mumbai', 'Pune', 'Thane'],
+    employerDemand: 'moderate',
+  },
+  {
+    id: 'SG005',
+    skill: 'Solar Installation',
+    demand: 9200,
+    supply: 6500,
+    gap: 2700,
+    gapPercent: 29,
+    priority: 'moderate',
+    medianWage: 18500,
+    trend: 'increasing',
+    sector: 'Renewable Energy',
+    districts: ['Nagpur', 'Pune', 'Kolhapur'],
+    employerDemand: 'moderate',
+  },
+  {
+    id: 'SG006',
+    skill: 'Robotics',
+    demand: 8600,
+    supply: 4200,
+    gap: 4400,
+    gapPercent: 51,
+    priority: 'high',
+    medianWage: 25000,
+    trend: 'increasing',
+    sector: 'Manufacturing',
+    districts: ['Pune', 'Nashik', 'Mumbai'],
+    employerDemand: 'high',
+  },
+  {
+    id: 'SG007',
+    skill: '3D Printing',
+    demand: 7200,
+    supply: 5100,
+    gap: 2100,
+    gapPercent: 29,
+    priority: 'moderate',
+    medianWage: 20000,
+    trend: 'increasing',
+    sector: 'Manufacturing',
+    districts: ['Mumbai', 'Pune', 'Nagpur'],
+    employerDemand: 'moderate',
+  },
+  {
+    id: 'SG008',
+    skill: 'Welding',
+    demand: 15800,
+    supply: 14200,
+    gap: 1600,
+    gapPercent: 10,
+    priority: 'low',
+    medianWage: 16500,
+    trend: 'stable',
+    sector: 'Manufacturing',
+    districts: ['Pune', 'Nashik', 'Kolhapur', 'Satara'],
+    employerDemand: 'moderate',
+  },
+  {
+    id: 'SG009',
+    skill: 'HVAC Technician',
+    demand: 6800,
+    supply: 5400,
+    gap: 1400,
+    gapPercent: 21,
+    priority: 'moderate',
+    medianWage: 18000,
+    trend: 'stable',
+    sector: 'Construction',
+    districts: ['Mumbai', 'Pune', 'Nagpur'],
+    employerDemand: 'moderate',
+  },
+  {
+    id: 'SG010',
+    skill: 'Electric Vehicle Maintenance',
+    demand: 5400,
+    supply: 2800,
+    gap: 2600,
+    gapPercent: 48,
+    priority: 'high',
+    medianWage: 22000,
+    trend: 'increasing',
+    sector: 'Automotive',
+    districts: ['Pune', 'Mumbai', 'Nashik'],
+    employerDemand: 'high',
+  },
+];
+
+export const demandSupplyTrend = [
+  { month: 'Jan', demand: 16000, supply: 6000 },
+  { month: 'Feb', demand: 16800, supply: 6200 },
+  { month: 'Mar', demand: 17200, supply: 6400 },
+  { month: 'Apr', demand: 17500, supply: 6500 },
+  { month: 'May', demand: 17900, supply: 6550 },
+  { month: 'Jun', demand: 18400, supply: 6600 },
+];
+
+export const summaryStats = {
+  criticalGaps: 12,
+  highPriority: 27,
+  moderate: 43,
+  skillsTracked: 137,
+};
